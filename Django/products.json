@@ -1,0 +1,7 @@
+[
+    {"id": 1, "name": "Laptop", "price": 999.99, "category": "Electronics", "stock": 50},
+    {"id": 2, "name": "Headphones", "price": 149.99, "category": "Electronics", "stock": 120},
+    {"id": 3, "name": "Desk Chair", "price": 299.99, "category": "Furniture", "stock": 30},
+    {"id": 4, "name": "Notebook", "price": 4.99, "category": "Stationery", "stock": 500},
+    {"id": 5, "name": "Water Bottle", "price": 19.99, "category": "Lifestyle", "stock": 200}
+]
