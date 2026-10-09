@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+python-multipart   # file uploads (lesson 06)
+httpx              # TestClient (lesson 07)
+pytest             # tests (lesson 07)

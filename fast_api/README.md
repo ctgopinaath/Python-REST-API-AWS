@@ -2,6 +2,8 @@
 
 A FastAPI REST API for managing users with automatic docs.
 
+> 📚 **New to FastAPI?** Follow the hands-on course in [LEARN_FASTAPI.md](LEARN_FASTAPI.md): what FastAPI is, its components, FastAPI vs Django, 7 lessons with runnable examples in [`examples/`](examples/) (CRUD, auth, a SQLite library project, advanced features, testing) and curl commands for every endpoint.
+
 ## Prerequisites
 
 - Python 3.8+

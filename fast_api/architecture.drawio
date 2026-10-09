@@ -1,0 +1,637 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" agent="generated" version="24.7.17">
+  <diagram id="1-repo-overview" name="1 Repo Overview">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1750" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="1-repo-t" value="Python-REST-API-AWS: Repository Overview" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-st" value="Same REST ideas implemented 6 ways: from a local in-memory Flask app up to an event-driven serverless shop on AWS." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="1100" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-client" value="Client&lt;br&gt;(curl / browser / Swagger UI)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="470" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-local" value="Your machine (local dev servers)" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;dashed=1;fillColor=#FAFAFA;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="180" y="110" width="820" height="840" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-flask" value="&lt;b&gt;flask/&lt;/b&gt;&lt;br&gt;Flask &amp;middot; port 5000&lt;br&gt;&lt;i&gt;Users API&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="30" y="50" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-fjson" value="&lt;b&gt;flask-json/&lt;/b&gt;&lt;br&gt;Flask &amp;middot; port 5001&lt;br&gt;&lt;i&gt;Products API&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="30" y="200" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-django" value="&lt;b&gt;Django/&lt;/b&gt;&lt;br&gt;Django REST Framework &amp;middot; port 8080&lt;br&gt;&lt;i&gt;Products API&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="30" y="350" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-djbase" value="&lt;b&gt;django-base/&lt;/b&gt;&lt;br&gt;Guide only (README)&lt;br&gt;&lt;i&gt;startproject + index.html + /api/products/&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="30" y="500" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-fastapi" value="&lt;b&gt;fast_api/&lt;/b&gt;&lt;br&gt;FastAPI + Uvicorn &amp;middot; port 8000&lt;br&gt;&lt;i&gt;Users API + 7-lesson course&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="30" y="660" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-mem" value="In-memory Python list&lt;br&gt;&lt;i&gt;(lost on restart)&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="420" y="55" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-pjson1" value="flask-json/products.json" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=12;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="420" y="205" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-pjson2" value="Django/products.json&lt;br&gt;&lt;i&gt;(db.sqlite3 configured, unused)&lt;/i&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=12;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="420" y="355" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-html" value="templates/myapp/index.html&lt;br&gt;+ JSON view" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=12;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="420" y="510" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-libdb" value="library.db (SQLite)&lt;br&gt;+ in-memory dicts" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1-repo-local">
+          <mxGeometry x="420" y="670" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a1" value="read / write" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-flask" target="1-repo-mem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a2" value="load / save" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-fjson" target="1-repo-pjson1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a3" value="load / save" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-django" target="1-repo-pjson2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a4" value="render" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-djbase" target="1-repo-html">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a5" value="lessons 03-05" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-fastapi" target="1-repo-libdb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-cloud" value="AWS Cloud" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="110" width="630" height="840" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-lamgrp" value="aws-lambda/  (Products API, manual setup)" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;dashed=1;fillColor=#FFF7EE;strokeColor=#D79B00;" vertex="1" parent="1-repo-cloud">
+          <mxGeometry x="20" y="40" width="590" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-gw1" value="API Gateway&lt;br&gt;(REST API, stage prod)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1-repo-lamgrp">
+          <mxGeometry x="30" y="90" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-l1" value="Lambda&lt;br&gt;products-api" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1-repo-lamgrp">
+          <mxGeometry x="260" y="90" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-s31" value="S3&lt;br&gt;products.json" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#60A337;gradientDirection=north;fillColor=#277116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1-repo-lamgrp">
+          <mxGeometry x="480" y="90" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a6" value="proxy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-gw1" target="1-repo-l1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a7" value="get / put" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-l1" target="1-repo-s31">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-eco" value="e-commerce/  (Orders, event-driven, AWS SAM)" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;dashed=1;fillColor=#FFF0F5;strokeColor=#BC1356;" vertex="1" parent="1-repo-cloud">
+          <mxGeometry x="20" y="300" width="590" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-gw2" value="API Gateway&lt;br&gt;(HTTP API)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="30" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-l2" value="Lambda&lt;br&gt;FastAPI + Mangum" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="200" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-eb" value="EventBridge&lt;br&gt;orders-bus" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="380" y="60" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-sns" value="SNS topic" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="380" y="210" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-sqs" value="SQS queue&lt;br&gt;(+ DLQ)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="200" y="210" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-wk" value="Lambda&lt;br&gt;order-worker" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="30" y="210" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-cw" value="CloudWatch Logs" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="30" y="370" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-mail" value="Email subscriber&lt;br&gt;(optional)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1-repo-eco">
+          <mxGeometry x="470" y="360" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-gw2" target="1-repo-l2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a9" value="OrderPlaced" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-l2" target="1-repo-eb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a10" value="rule" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-eb" target="1-repo-sns">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-sns" target="1-repo-sqs">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a12" value="batch 10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-sqs" target="1-repo-wk">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a13" value="print" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-wk" target="1-repo-cw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="1-repo-sns" target="1-repo-mail">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;strokeColor=#666666;" edge="1" parent="1" source="1-repo-client" target="1-repo-flask">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;strokeColor=#666666;" edge="1" parent="1" source="1-repo-client" target="1-repo-fjson">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;strokeColor=#666666;" edge="1" parent="1" source="1-repo-client" target="1-repo-django">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;strokeColor=#666666;" edge="1" parent="1" source="1-repo-client" target="1-repo-fastapi">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a19" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;strokeColor=#666666;" edge="1" parent="1" source="1-repo-client" target="1-repo-gw1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a20" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;strokeColor=#666666;" edge="1" parent="1" source="1-repo-client" target="1-repo-gw2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a21" value="+ file persistence" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="1-repo-flask" target="1-repo-fjson">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a22" value="same Products API&lt;br&gt;in DRF" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="1-repo-fjson" target="1-repo-django">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a23" value="same Products API, serverless&lt;br&gt;(products.json moves to S3)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="1-repo-pjson1" target="1-repo-s31">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-a24" value="FastAPI goes serverless&lt;br&gt;(Mangum adapter)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;exitX=1;exitY=0.5;" edge="1" parent="1" source="1-repo-libdb" target="1-repo-l2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="1-repo-legend" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;Solid arrow: runtime call / data access&lt;br&gt;Dashed arrow: learning path (how one project evolves into the next)&lt;br&gt;Green: Flask &amp;middot; Blue: Django &amp;middot; Orange: FastAPI &amp;middot; AWS icons: cloud services" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="180" y="980" width="600" height="90" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2-local-apis" name="2 Local APIs">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1750" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2-loca-t" value="Local REST APIs: Flask vs Flask-JSON vs Django REST Framework vs FastAPI" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-flask" value="flask/app.py  (Flask :5000)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;rounded=1;arcSize=6;fontStyle=1;fontSize=13;fillColor=#D5E8D4;strokeColor=#82B366;swimlaneFillColor=#FFFFFF;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="390" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-flasksrv" value="&lt;b&gt;Server&lt;/b&gt;&lt;br&gt;Werkzeug dev server&lt;br&gt;app.run(debug=True)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="2-loca-flask">
+          <mxGeometry x="20" y="50" width="350" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-flaskrt" value="&lt;b&gt;Routes&lt;/b&gt;&lt;br&gt;GET /users&lt;br&gt;GET /users/&amp;lt;id&amp;gt;&lt;br&gt;POST /users&lt;br&gt;PUT /users/&amp;lt;id&amp;gt;&lt;br&gt;DELETE /users/&amp;lt;id&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="2-loca-flask">
+          <mxGeometry x="20" y="160" width="350" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-flaskst" value="In-memory &lt;b&gt;users&lt;/b&gt; list&lt;br&gt;(John, Alice, Bob)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="2-loca-flask">
+          <mxGeometry x="95" y="340" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-flasknt" value="No validation&lt;br&gt;data.get(...) by hand" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="2-loca-flask">
+          <mxGeometry x="20" y="480" width="350" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-a1" value="CRUD" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="2-loca-flaskrt" target="2-loca-flaskst">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fjson" value="flask-json/app.py  (Flask :5001)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;rounded=1;arcSize=6;fontStyle=1;fontSize=13;fillColor=#D5E8D4;strokeColor=#82B366;swimlaneFillColor=#FFFFFF;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="90" width="390" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fjsonsrv" value="&lt;b&gt;Server&lt;/b&gt;&lt;br&gt;Werkzeug dev server&lt;br&gt;app.run(port=5001)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="2-loca-fjson">
+          <mxGeometry x="20" y="50" width="350" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fjsonrt" value="&lt;b&gt;Routes&lt;/b&gt;&lt;br&gt;GET /products?category=&lt;br&gt;GET /products/&amp;lt;id&amp;gt;&lt;br&gt;POST /products&lt;br&gt;PUT /products/&amp;lt;id&amp;gt;&lt;br&gt;DELETE /products/&amp;lt;id&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="2-loca-fjson">
+          <mxGeometry x="20" y="160" width="350" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fjsonst" value="products.json&lt;br&gt;load_products() / save_products()" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=12;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="2-loca-fjson">
+          <mxGeometry x="95" y="340" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fjsonnt" value="No validation&lt;br&gt;Persists across restarts" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="2-loca-fjson">
+          <mxGeometry x="20" y="480" width="350" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-a2" value="CRUD" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="2-loca-fjsonrt" target="2-loca-fjsonst">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-django" value="Django/  (DRF :8080)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;rounded=1;arcSize=6;fontStyle=1;fontSize=13;fillColor=#DAE8FC;strokeColor=#6C8EBF;swimlaneFillColor=#FFFFFF;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="90" width="390" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-djangosrv" value="&lt;b&gt;Server&lt;/b&gt;&lt;br&gt;manage.py runserver 8080&lt;br&gt;settings.py &amp;rarr; urls.py &amp;rarr; views.py&lt;br&gt;@api_view + Response" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="2-loca-django">
+          <mxGeometry x="20" y="50" width="350" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-djangort" value="&lt;b&gt;Routes&lt;/b&gt;&lt;br&gt;GET /products/?category=&lt;br&gt;GET /products/&amp;lt;id&amp;gt;/&lt;br&gt;POST /products/create/&lt;br&gt;PUT /products/&amp;lt;id&amp;gt;/update/&lt;br&gt;DELETE /products/&amp;lt;id&amp;gt;/delete/" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="2-loca-django">
+          <mxGeometry x="20" y="160" width="350" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-djangost" value="products.json&lt;br&gt;(same file logic as flask-json)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=12;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="2-loca-django">
+          <mxGeometry x="95" y="340" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-djangont" value="JSONRenderer only&lt;br&gt;db.sqlite3 configured but unused" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="2-loca-django">
+          <mxGeometry x="20" y="480" width="350" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-a3" value="CRUD" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="2-loca-djangort" target="2-loca-djangost">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fastapi" value="fast_api/app.py  (FastAPI :8000)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;rounded=1;arcSize=6;fontStyle=1;fontSize=13;fillColor=#FFE6CC;strokeColor=#D79B00;swimlaneFillColor=#FFFFFF;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="90" width="390" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fastapisrv" value="&lt;b&gt;Server&lt;/b&gt;&lt;br&gt;uvicorn app:app --reload&lt;br&gt;(ASGI)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="2-loca-fastapi">
+          <mxGeometry x="20" y="50" width="350" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fastapirt" value="&lt;b&gt;Routes&lt;/b&gt;&lt;br&gt;GET /users/{user_id}&lt;br&gt;POST /users  (201)&lt;br&gt;&lt;br&gt;/docs  (Swagger UI)&lt;br&gt;/redoc" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="2-loca-fastapi">
+          <mxGeometry x="20" y="160" width="350" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fastapist" value="Static response&lt;br&gt;(no storage)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="2-loca-fastapi">
+          <mxGeometry x="95" y="340" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-fastapint" value="Type hints &amp;rarr; automatic 422 validation&lt;br&gt;Auto OpenAPI docs" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="2-loca-fastapi">
+          <mxGeometry x="20" y="480" width="350" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-a4" value="CRUD" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="2-loca-fastapirt" target="2-loca-fastapist">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-cmp" value="&lt;b&gt;Comparison (from the root README)&lt;/b&gt;&lt;br&gt;Auto docs: only FastAPI &amp;middot; Persistence: Flask = memory, Flask-JSON / Django = JSON file, FastAPI app.py = none&lt;br&gt;Speed: FastAPI fastest &amp;middot; Setup: Django the most complex &amp;middot; Full guide: fast_api/LEARN_FASTAPI.md" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="740" width="1640" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="2-loca-djb" value="&lt;b&gt;django-base/&lt;/b&gt; (README guide): django-admin startproject myproject &amp;rarr; startapp myapp &amp;rarr; templates/myapp/index.html at &lt;b&gt;/&lt;/b&gt; + DRF JSON view at &lt;b&gt;/api/products/&lt;/b&gt; &amp;rarr; migrate &amp;rarr; runserver" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="830" width="1640" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3-aws-lambda-products" name="3 AWS Lambda Products">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="3-aws--t" value="aws-lambda/: Serverless Products API (API Gateway + Lambda + S3)" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1200" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--client" value="curl / browser" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--cloud" value="AWS Cloud (us-east-1)" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="90" width="1000" height="460" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--gw" value="API Gateway (REST API)&lt;br&gt;stage: &lt;b&gt;prod&lt;/b&gt;&lt;br&gt;Lambda Proxy Integration" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="3-aws--cloud">
+          <mxGeometry x="60" y="170" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--res" value="&lt;b&gt;Resources&lt;/b&gt;&lt;br&gt;/products: GET, POST&lt;br&gt;/products/{id}: GET, PUT, DELETE" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="3-aws--cloud">
+          <mxGeometry x="20" y="320" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--lam" value="Lambda &lt;b&gt;products-api&lt;/b&gt;&lt;br&gt;python3.13&lt;br&gt;lambda_function.lambda_handler" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="3-aws--cloud">
+          <mxGeometry x="420" y="170" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--logic" value="&lt;b&gt;lambda_handler(event)&lt;/b&gt;&lt;br&gt;reads httpMethod, path,&lt;br&gt;pathParameters, queryStringParameters, body&lt;br&gt;&amp;rarr; if/else routing &amp;rarr; response(status, body)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="3-aws--cloud">
+          <mxGeometry x="330" y="320" width="260" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--s3" value="S3 bucket&lt;br&gt;srm-test-my-products-bucket&lt;br&gt;&lt;b&gt;products.json&lt;/b&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#60A337;gradientDirection=north;fillColor=#277116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="3-aws--cloud">
+          <mxGeometry x="820" y="170" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--iam" value="IAM role &lt;b&gt;lambda-role&lt;/b&gt;&lt;br&gt;s3:GetObject, s3:PutObject" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F54749;gradientDirection=north;fillColor=#C7131F;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.identity_and_access_management;" vertex="1" parent="3-aws--cloud">
+          <mxGeometry x="820" y="330" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a1" value="HTTPS&lt;br&gt;/prod/products" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="3-aws--client" target="3-aws--gw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a2" value="event (proxy)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="3-aws--gw" target="3-aws--lam">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a3" value="load_products()&lt;br&gt;get_object" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="3-aws--lam" target="3-aws--s3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a4" value="save_products()&lt;br&gt;put_object" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" edge="1" parent="1" source="3-aws--lam" target="3-aws--s3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="3-aws--lam" target="3-aws--logic">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="3-aws--gw" target="3-aws--res">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--a7" value="assumed by" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="3-aws--iam" target="3-aws--lam">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--why" value="&lt;b&gt;Why S3?&lt;/b&gt; Lambda is stateless and can't keep a local file between runs, so products.json lives in S3.&lt;br&gt;&lt;b&gt;Gotcha:&lt;/b&gt; 'Missing Authentication Token' means the route wasn't found: check the stage in the URL and Deploy API." style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="160" y="590" width="1000" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="3-aws--vs" value="&lt;b&gt;vs flask-json&lt;/b&gt;: same CRUD logic. Runs on demand, pay per request, scales automatically, ~30 min setup." style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="160" y="680" width="1000" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="4-e-commerce-event-driven" name="4 E-Commerce Event-Driven">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="4-e-co-t" value="e-commerce/: Event-Driven Orders (FastAPI on Lambda + EventBridge + SNS + SQS)" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1400" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-client" value="curl&lt;br&gt;POST /orders" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="250" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-sam" value="AWS SAM&lt;br&gt;template.yaml&lt;br&gt;sam build / sam deploy" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudformation;" vertex="1" parent="1">
+          <mxGeometry x="40" y="620" width="70" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-cloud" value="AWS Cloud: stack ecommerce-demo" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="90" width="1480" height="760" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-gw" value="API Gateway (HTTP API)&lt;br&gt;/{proxy+}  ANY" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="40" y="170" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-apigrp" value="Lambda: ecommerce-orders-api  (api/app.py)" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;dashed=1;fillColor=#FFF7EE;strokeColor=#D79B00;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="220" y="60" width="400" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-apil" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="4-e-co-apigrp">
+          <mxGeometry x="20" y="50" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-mangum" value="&lt;b&gt;Mangum(app)&lt;/b&gt;&lt;br&gt;API GW event &amp;rarr; ASGI" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="4-e-co-apigrp">
+          <mxGeometry x="110" y="50" width="270" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-routes" value="&lt;b&gt;FastAPI routes&lt;/b&gt;&lt;br&gt;GET /products &amp;middot; GET /products/{id}&lt;br&gt;POST /orders (201) &amp;middot; GET /orders/{order_id}" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="4-e-co-apigrp">
+          <mxGeometry x="20" y="140" width="360" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-pyd" value="&lt;b&gt;Pydantic&lt;/b&gt;: OrderRequest{customer_email, items[OrderItem{product_id, quantity&amp;gt;0}]}&lt;br&gt;PRODUCTS + ORDERS dicts (in-memory)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="4-e-co-apigrp">
+          <mxGeometry x="20" y="230" width="360" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-eb" value="EventBridge bus&lt;br&gt;&lt;b&gt;ecommerce-orders-bus&lt;/b&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="760" y="170" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-rule" value="&lt;b&gt;Rule OrderPlacedRule&lt;/b&gt;&lt;br&gt;source = ecommerce.orders&lt;br&gt;detail-type = OrderPlaced" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FCE4EC;strokeColor=#BC1356;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="900" y="175" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-sns" value="SNS topic&lt;br&gt;&lt;b&gt;ecommerce-order-notifications&lt;/b&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="1240" y="170" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-mail" value="Email subscription&lt;br&gt;(if NotificationEmail set)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="1340" y="340" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-sqs" value="SQS queue&lt;br&gt;&lt;b&gt;ecommerce-order-processing&lt;/b&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="1240" y="470" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-dlq" value="SQS DLQ&lt;br&gt;order-processing-dlq" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="1240" y="660" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-wk" value="Lambda&lt;br&gt;&lt;b&gt;ecommerce-order-worker&lt;/b&gt;&lt;br&gt;worker/handler.py" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="760" y="470" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-wlogic" value="for record in Records:&lt;br&gt;&amp;nbsp; SQS body &amp;rarr; SNS Message &amp;rarr; EventBridge detail&lt;br&gt;&amp;nbsp; print reserve stock + total" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="420" y="600" width="300" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-cw" value="CloudWatch Logs&lt;br&gt;sam logs --tail" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" vertex="1" parent="4-e-co-cloud">
+          <mxGeometry x="520" y="470" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a1" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-client" target="4-e-co-gw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-gw" target="4-e-co-apigrp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a3" value="put_events&lt;br&gt;OrderPlaced" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-apigrp" target="4-e-co-eb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-eb" target="4-e-co-rule">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a5" value="target" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-rule" target="4-e-co-sns">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a6" value="sqs subscription" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-sns" target="4-e-co-sqs">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a7" value="email" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-sns" target="4-e-co-mail">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a8" value="event source&lt;br&gt;BatchSize 10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-sqs" target="4-e-co-wk">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a9" value="after 3 failed&lt;br&gt;receives" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-sqs" target="4-e-co-dlq">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a10" value="print()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="4-e-co-wk" target="4-e-co-cw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="4-e-co-wk" target="4-e-co-wlogic">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-a12" value="deploys all resources" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="4-e-co-sam" target="4-e-co-cloud">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-s1" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#232F3E;fontColor=#FFFFFF;fontStyle=1;fontSize=12;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="230" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-s2" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#232F3E;fontColor=#FFFFFF;fontStyle=1;fontSize=12;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="840" y="300" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-s3" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#232F3E;fontColor=#FFFFFF;fontStyle=1;fontSize=12;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="300" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-s4" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#232F3E;fontColor=#FFFFFF;fontStyle=1;fontSize=12;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="470" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-s5" value="5" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#232F3E;fontColor=#FFFFFF;fontStyle=1;fontSize=12;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="680" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-s6" value="6" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#232F3E;fontColor=#FFFFFF;fontStyle=1;fontSize=12;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="880" y="540" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-steps" value="&lt;b&gt;Flow&lt;/b&gt;&lt;br&gt;1. Client POSTs an order &amp;rarr; API Gateway&lt;br&gt;2. FastAPI validates, stores in memory, publishes OrderPlaced, returns 201 right away&lt;br&gt;3. EventBridge rule matches and forwards to SNS&lt;br&gt;4. SNS fans out to SQS (and email)&lt;br&gt;5. SQS buffers, retries 3x, then DLQ&lt;br&gt;6. Worker Lambda processes the batch and logs to CloudWatch" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="170" y="880" width="760" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="4-e-co-local" value="&lt;b&gt;Run locally:&lt;/b&gt; leave EVENT_BUS_NAME unset &amp;rarr; uvicorn app:app &amp;rarr; publish_order_placed() only prints" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="960" y="880" width="690" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="5-fastapi-course" name="5 FastAPI Course">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1750" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="5-fast-t" value="fast_api/: FastAPI Request Pipeline, Course Lessons and Library App" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p0" value="Client (curl)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p1" value="Uvicorn&lt;br&gt;(ASGI server)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="245" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p0" target="5-fast-p1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p2" value="Middleware&lt;br&gt;CORS, timing" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="450" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p1" target="5-fast-p2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p3" value="Routing&lt;br&gt;@app.get / APIRouter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="655" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p2" target="5-fast-p3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p4" value="Dependencies&lt;br&gt;Depends()" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="860" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p3" target="5-fast-p4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p5" value="Validation&lt;br&gt;Pydantic &amp;rarr; 422" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p4" target="5-fast-p5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p6" value="Your function" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p5" target="5-fast-p6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-p7" value="response_model&lt;br&gt;&amp;rarr; JSON" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="1475" y="90" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-p6" target="5-fast-p7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-lessons" value="Course roadmap (LEARN_FASTAPI.md + examples/)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;rounded=1;arcSize=6;fontStyle=1;fontSize=13;fillColor=#FFE6CC;strokeColor=#D79B00;swimlaneFillColor=#FFFFFF;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="520" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l0" value="&lt;b&gt;app.py&lt;/b&gt;: first GET + POST" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="45" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l1" value="&lt;b&gt;01_basics.py&lt;/b&gt;: path + query params" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="103" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l0" target="5-fast-l1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l2" value="&lt;b&gt;02_models.py&lt;/b&gt;: Pydantic, Field, enums, response_model" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="161" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l1" target="5-fast-l2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l3" value="&lt;b&gt;03_crud_todos.py&lt;/b&gt;: CRUD, PUT vs PATCH, pagination" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="219" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l2" target="5-fast-l3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l4" value="&lt;b&gt;04_auth_dependencies.py&lt;/b&gt;: Depends, Bearer token, API key, roles" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="277" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l3" target="5-fast-l4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l5" value="&lt;b&gt;05_library_app/&lt;/b&gt;: routers, SQLite, business rules" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="335" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l4" target="5-fast-l5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l6" value="&lt;b&gt;06_advanced.py&lt;/b&gt;: middleware, CORS, upload, async, rate limit" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="20" y="393" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l5" target="5-fast-l6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-l7" value="&lt;b&gt;test_03_crud_todos.py&lt;/b&gt;: pytest + TestClient" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="20" y="451" width="480" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-l6" target="5-fast-l7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a15" value="tests" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="5-fast-l7" target="5-fast-l3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-app" value="05_library_app/  (uvicorn main:app)" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;dashed=1;fillColor=#FFF7EE;strokeColor=#D79B00;" vertex="1" parent="1">
+          <mxGeometry x="620" y="200" width="640" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-main" value="&lt;b&gt;main.py&lt;/b&gt;&lt;br&gt;FastAPI(lifespan) &amp;rarr; init_db()&lt;br&gt;include_router x3 + /health" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="220" y="40" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-rb" value="&lt;b&gt;routers/books.py&lt;/b&gt;&lt;br&gt;/books CRUD&lt;br&gt;available_copies (SQL)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="20" y="170" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-rm" value="&lt;b&gt;routers/members.py&lt;/b&gt;&lt;br&gt;/members" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="230" y="170" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-rl" value="&lt;b&gt;routers/loans.py&lt;/b&gt;&lt;br&gt;/loans/borrow, /{id}/return&lt;br&gt;/loans, /loans/overdue" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#FFE6CC;strokeColor=#D79B00;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="440" y="170" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-sch" value="&lt;b&gt;schemas.py&lt;/b&gt;&lt;br&gt;BookIn/Out, MemberIn/Out,&lt;br&gt;BorrowIn, LoanOut" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="20" y="310" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-dbm" value="&lt;b&gt;database.py&lt;/b&gt;&lt;br&gt;get_db(): yield dependency&lt;br&gt;commit / rollback / close" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="230" y="310" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-bt" value="&lt;b&gt;BackgroundTasks&lt;/b&gt;&lt;br&gt;send_receipt()" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F5F5F5;strokeColor=#666666;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="440" y="310" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-sql" value="library.db (SQLite)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="5-fast-app">
+          <mxGeometry x="245" y="430" width="150" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-main" target="5-fast-rb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a17" value="Depends(get_db)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="5-fast-rb" target="5-fast-dbm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-main" target="5-fast-rm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a19" value="Depends(get_db)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="5-fast-rm" target="5-fast-dbm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-main" target="5-fast-rl">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a21" value="Depends(get_db)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="5-fast-rl" target="5-fast-dbm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="5-fast-sch" target="5-fast-rb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a23" value="add_task" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-rl" target="5-fast-bt">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="5-fast-dbm" target="5-fast-sql">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-rules" value="&lt;b&gt;Loan business rules&lt;/b&gt;&lt;br&gt;&amp;bull; copy must be available (else 409)&lt;br&gt;&amp;bull; max 3 active loans per member&lt;br&gt;&amp;bull; overdue member blocked (403)&lt;br&gt;&amp;bull; fine = Rs.5 x days late&lt;br&gt;&amp;bull; can't delete a borrowed book&lt;br&gt;&amp;bull; unique ISBN / email (409)" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="200" width="240" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#888888;fontColor=#555555;" edge="1" parent="1" source="5-fast-rl" target="5-fast-rules">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-er" value="SQLite schema" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;arcSize=4;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;dashed=1;fillColor=#F5F9FF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="420" width="420" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-tb" value="&lt;b&gt;books&lt;/b&gt;&lt;hr&gt;id PK&lt;br&gt;title, author&lt;br&gt;isbn UNIQUE&lt;br&gt;total_copies" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="5-fast-er">
+          <mxGeometry x="20" y="40" width="120" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-tm" value="&lt;b&gt;members&lt;/b&gt;&lt;hr&gt;id PK&lt;br&gt;name&lt;br&gt;email UNIQUE" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="5-fast-er">
+          <mxGeometry x="280" y="40" width="120" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-tl" value="&lt;b&gt;loans&lt;/b&gt;&lt;hr&gt;id PK&lt;br&gt;book_id FK&lt;br&gt;member_id FK&lt;br&gt;borrowed_on, due_on&lt;br&gt;returned_on" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="5-fast-er">
+          <mxGeometry x="140" y="170" width="140" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a26" value="N : 1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;" edge="1" parent="1" source="5-fast-tl" target="5-fast-tb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-a27" value="N : 1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;fontSize=11;strokeWidth=1.5;labelBackgroundColor=#FFFFFF;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;" edge="1" parent="1" source="5-fast-tl" target="5-fast-tm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-auth" value="&lt;b&gt;Lesson 04 auth flow:&lt;/b&gt; POST /login &amp;rarr; access_token &amp;rarr; Authorization: Bearer &amp;lt;token&amp;gt; &amp;rarr; get_current_user &amp;rarr; require_admin (403 if not admin) &amp;middot; X-API-Key header for /reports/daily" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="760" width="1220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="5-fast-adv" value="&lt;b&gt;Lesson 06:&lt;/b&gt; @app.middleware (X-Request-ID, X-Process-Time-ms) &amp;middot; CORSMiddleware &amp;middot; InsufficientBalance exception handler &amp;middot; UploadFile CSV &amp;middot; asyncio.gather &amp;middot; 429 rate limit &amp;middot; StreamingResponse" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=11;align=left;spacingLeft=6;verticalAlign=top;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="830" width="1220" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

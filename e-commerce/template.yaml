@@ -1,0 +1,148 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: E-commerce demo - FastAPI on Lambda + API Gateway + EventBridge + SNS + SQS
+
+Parameters:
+  NotificationEmail:
+    Type: String
+    Default: ""
+    Description: Optional - email address that receives an SNS message for every order
+
+Conditions:
+  HasEmail: !Not [!Equals [!Ref NotificationEmail, ""]]
+
+Globals:
+  Function:
+    Runtime: python3.13
+    Timeout: 10
+    MemorySize: 256
+
+Resources:
+  # 1. Event bus that the API publishes "OrderPlaced" events to
+  OrdersEventBus:
+    Type: AWS::Events::EventBus
+    Properties:
+      Name: ecommerce-orders-bus
+
+  # 2. FastAPI app on Lambda, exposed through API Gateway (HTTP API)
+  OrdersApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ecommerce-orders-api
+      CodeUri: api/
+      Handler: app.handler
+      Environment:
+        Variables:
+          EVENT_BUS_NAME: !Ref OrdersEventBus
+      Policies:
+        - EventBridgePutEventsPolicy:
+            EventBusName: !Ref OrdersEventBus
+      Events:
+        Api:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
+  # 3. SNS topic - fans each order out to every subscriber
+  OrderNotificationsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: ecommerce-order-notifications
+
+  OrderNotificationsTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      Topics:
+        - !Ref OrderNotificationsTopic
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: events.amazonaws.com
+            Action: sns:Publish
+            Resource: !Ref OrderNotificationsTopic
+
+  # 4. EventBridge rule - routes OrderPlaced events to the SNS topic
+  OrderPlacedRule:
+    Type: AWS::Events::Rule
+    Properties:
+      EventBusName: !Ref OrdersEventBus
+      EventPattern:
+        source:
+          - ecommerce.orders
+        detail-type:
+          - OrderPlaced
+      Targets:
+        - Id: OrderNotificationsTopic
+          Arn: !Ref OrderNotificationsTopic
+
+  # 5. SQS queue subscribed to the topic (+ dead-letter queue for failed messages)
+  OrderProcessingDLQ:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: ecommerce-order-processing-dlq
+
+  OrderProcessingQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: ecommerce-order-processing
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt OrderProcessingDLQ.Arn
+        maxReceiveCount: 3
+
+  OrderProcessingQueuePolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues:
+        - !Ref OrderProcessingQueue
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: sns.amazonaws.com
+            Action: sqs:SendMessage
+            Resource: !GetAtt OrderProcessingQueue.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !Ref OrderNotificationsTopic
+
+  QueueSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref OrderNotificationsTopic
+      Protocol: sqs
+      Endpoint: !GetAtt OrderProcessingQueue.Arn
+
+  EmailSubscription:
+    Type: AWS::SNS::Subscription
+    Condition: HasEmail
+    Properties:
+      TopicArn: !Ref OrderNotificationsTopic
+      Protocol: email
+      Endpoint: !Ref NotificationEmail
+
+  # 6. Worker Lambda - consumes orders from the SQS queue
+  OrderWorkerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ecommerce-order-worker
+      CodeUri: worker/
+      Handler: handler.lambda_handler
+      Events:
+        Queue:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt OrderProcessingQueue.Arn
+            BatchSize: 10
+
+Outputs:
+  ApiUrl:
+    Description: Base URL of the API
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+  EventBusName:
+    Value: !Ref OrdersEventBus
+  TopicArn:
+    Value: !Ref OrderNotificationsTopic
+  QueueUrl:
+    Value: !Ref OrderProcessingQueue

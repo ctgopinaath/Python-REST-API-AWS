@@ -14,7 +14,9 @@ python_api/
 ├── flask/          # Flask - in-memory users API       (port 5000)
 ├── flask-json/     # Flask - file-based products API   (port 5001)
 ├── fast_api/       # FastAPI - users API                (port 8000)
-└── Django/         # Django REST Framework - users API  (port 8000)
+├── Django/         # Django REST Framework - users API  (port 8000)
+├── aws-lambda/     # Lambda + API Gateway + S3 - products API
+└── e-commerce/     # FastAPI on Lambda + API Gateway + EventBridge + SNS + SQS
 ```
 
 ## Quick Install (all frameworks)
